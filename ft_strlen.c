@@ -6,11 +6,12 @@
 /*   By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 16:31:57 by ade-cham          #+#    #+#             */
-/*   Updated: 2020/04/29 16:34:52 by ade-cham         ###   ########.fr       */
+/*   Updated: 2020/04/30 09:56:30 by ade-cham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include <string.h>
+#include "libft.h"
 
 int ft_strlen(char *str)
 {
