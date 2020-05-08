@@ -6,7 +6,7 @@
 /*   By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/01 13:52:18 by ade-cham          #+#    #+#             */
-/*   Updated: 2020/05/08 16:41:21 by ade-cham         ###   ########.fr       */
+/*   Updated: 2020/05/08 17:03:49 by ade-cham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char    *ft_strchr(const char *s, int c)
 			return (NULL);
 		i++;
 	}
-	return ((char*)str +i);
+	return (&(char*)str + i);
 }
