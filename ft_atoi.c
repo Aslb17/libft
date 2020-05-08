@@ -6,11 +6,9 @@
 /*   By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/04 11:27:49 by ade-cham          #+#    #+#             */
-/*   Updated: 2020/05/06 17:40:53 by ade-cham         ###   ########.fr       */
+/*   Updated: 2020/05/08 14:21:17 by ade-cham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int ft_atoi(const char *str)
 {
@@ -34,6 +32,7 @@ int ft_atoi(const char *str)
     {
         result = result * 10 + (str[i] - 48);
         i++;
+     }
     result *= sign;
     return (result);
 }
