@@ -6,11 +6,12 @@
 /*   By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/18 13:56:28 by ade-cham          #+#    #+#             */
-/*   Updated: 2020/05/19 15:47:56 by ade-cham         ###   ########.fr       */
+/*   Updated: 2020/05/19 15:58:00 by ade-cham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	count_words(char const *s, char c)
 {
