@@ -6,7 +6,7 @@
 #    By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/25 11:24:10 by ade-cham          #+#    #+#              #
-#    Updated: 2020/05/25 14:13:54 by ade-cham         ###   ########.fr        #
+#    Updated: 2020/05/26 14:54:02 by ade-cham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,13 +33,17 @@ CFLAGS	= -Wall -Wextra -Werror
 
 	all		$(NAME)
 
-$(NAME):${OBJS}
+$(NAME):
+	${OBJS}
 		$(AR) $(NAME) $(OBJS)
 
-clean:	${RM} ${OBJS}
+clean:	
+	${RM} ${OBJS}
 
-fclean:	clean
+fclean:	
+	clean
 		${RM} $(NAME)
 
-re:		fclean all
+re:		
+	fclean all
 
