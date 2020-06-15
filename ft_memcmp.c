@@ -6,13 +6,13 @@
 /*   By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/11 16:09:51 by ade-cham          #+#    #+#             */
-/*   Updated: 2020/05/11 16:13:26 by ade-cham         ###   ########.fr       */
+/*   Updated: 2020/06/05 15:19:48 by ade-cham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*str1;
 	unsigned char	*str2;

@@ -3,41 +3,75 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+         #
+#    By: ade-cham </var/mail/ade-cham>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/05/25 11:24:10 by ade-cham          #+#    #+#              #
-#    Updated: 2020/05/27 13:55:34 by ade-cham         ###   ########.fr        #
+#    Created: 2020/05/29 16:21:36 by ade-cham          #+#    #+#              #
+#    Updated: 2020/05/29 16:28:35 by ade-cham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-Name	= libft.a
+NAME	= libft.a
+CC	 	= gcc
+AR		= ar -rcs
+CFLAGS	= -Wall
+CFLAGS	+= -Wextra
+CFLAGS	+= -Werror
 
-SRCS		= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
+SRCS	= ft_memset.c
+SRCS	+= ft_bzero.c
+SRCS	+= ft_memcpy.c
+SRCS	+= ft_memccpy.c
+SRCS	+= ft_memmove.c
+SRCS	+= ft_memchr.c
+SRCS	+= ft_memcmp.c
+SRCS	+= ft_strlen.c
 
-OBJS	= ${SRCS:.c=.o}
+SRCS	+= ft_calloc.c
+SRCS	+= ft_putchar_fd.c
+SRCS	+= ft_putstr_fd.c
+SRCS	+= ft_putendl_fd.c
+SRCS	+= ft_putnbr_fd.c
+SRCS	+= ft_isalpha.c
+SRCS	+= ft_isdigit.c
+SRCS	+= ft_isalnum.c
+SRCS	+= ft_isascii.c
+SRCS	+= ft_isprint.c
+SRCS	+= ft_toupper.c
+SRCS	+= ft_tolower.c
+SRCS	+= ft_strncmp.c
+SRCS	+= ft_atoi.c
 
-CC		= gcc
+SRCS	+= ft_strlcpy.c
+SRCS	+= ft_strlcat.c
+SRCS	+= ft_strchr.c
+SRCS	+= ft_strrchr.c
+SRCS	+= ft_strnstr.c
+SRCS	+= ft_strdup.c
+SRCS	+= ft_substr.c
+SRCS	+= ft_strjoin.c
+SRCS	+= ft_strtrim.c
+SRCS	+= ft_split.c
+SRCS	+= ft_itoa.c
+SRCS	+= ft_strmapi.c
 
-RM		= rm -f
+OBJS = $(SRCS:.c=.o)
 
-CFLAGS	= -Wall -Wextra -Werror
+all: $(NAME)
 
-.c.o:		
-			${CC } ${CFLAGS} -c $< -o $(<:.c=.o)
+.c.o:
+		$(CC) $(CFLAGS) -g -c $< -o $(<:.c=.o)
 
-all:		$(NAME)
+$(NAME): $(OBJS)
+		$(AR) $(NAME) $(OBJS)
 
-$(NAME):	${OBJS}
-			$(CC) -o $(NAME) $(OBJS)
+clean:
+	$(RM) $(OBJS)
+	echo "Cleaning Objs"
 
-clean:	
-			${RM} ${OBJS}
+fclean:	clean
+	$(RM) $(NAME)
+	echo "Cleaning Lib"
 
-fclean:		clean
-			${RM} $(NAME)
+re:	fclean all
 
-re:		
-			fclean all
-
-.PHONY:		all clean fclean re
-
+.PHONY:	clean fclean re

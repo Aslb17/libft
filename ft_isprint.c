@@ -6,13 +6,15 @@
 /*   By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 17:12:12 by ade-cham          #+#    #+#             */
-/*   Updated: 2020/05/08 16:42:58 by ade-cham         ###   ########.fr       */
+/*   Updated: 2020/05/29 15:48:39 by ade-cham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
-    if (c > 31 && c < 127)
-        return (1);
-    return (0);
+	if (c > 31 && c < 127)
+		return (1);
+	return (0);
 }

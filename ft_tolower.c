@@ -6,11 +6,13 @@
 /*   By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 17:19:48 by ade-cham          #+#    #+#             */
-/*   Updated: 2020/05/08 16:44:55 by ade-cham         ###   ########.fr       */
+/*   Updated: 2020/05/29 15:59:17 by ade-cham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
 	if ((c >= 'A' && c <= 'Z'))
 		return (c + 32);

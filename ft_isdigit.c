@@ -6,13 +6,15 @@
 /*   By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 16:56:51 by ade-cham          #+#    #+#             */
-/*   Updated: 2020/05/08 14:37:55 by ade-cham         ###   ########.fr       */
+/*   Updated: 2020/06/04 12:55:12 by ade-cham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
-    if (c > 48 && c < 58)
-        return (1);
-    return (0);
+	if (c > 47 && c < 58)
+		return (1);
+	return (0);
 }

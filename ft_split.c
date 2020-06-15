@@ -6,7 +6,7 @@
 /*   By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/18 13:56:28 by ade-cham          #+#    #+#             */
-/*   Updated: 2020/05/19 15:58:00 by ade-cham         ###   ########.fr       */
+/*   Updated: 2020/06/04 17:41:33 by ade-cham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,12 @@ static int	count_words(char const *s, char c)
 	i = 0;
 	if (c < 0)
 		return (0);
-    while (s[i] != '\0')
-    {
-        if ((s[i] != c && s[i + 1] == c) || (s[i] != c && s[i + 1] == '\0')
-	    	words++;
+	if (s[0] != c)
+		words++;
+	while (s[i] != '\0' && s[i + 1] != '\0')
+	{
+		if (s[i] == c && s[i + 1] != c)
+			words++;
 		i++;
 	}
 	return (words);
@@ -46,14 +48,11 @@ char		**ft_split(char const *s, char c)
 	char	**ptr;
 	int		i;
 	int		start;
-	
-    if (!s)
+
+	if (!s)
 		return (NULL);
 	if (!(ptr = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1))))
-    {
-		free(ptr);
-        return (NULL);
-    }
+		return (NULL);
 	i = 0;
 	start = 0;
 	while (s[i] != '\0')
@@ -64,7 +63,8 @@ char		**ft_split(char const *s, char c)
 			i = i + word_len(s, c, i);
 			start++;
 		}
-		i++;
+		else
+			i++;
 	}
 	ptr[start] = NULL;
 	return (ptr);

@@ -6,11 +6,13 @@
 /*   By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 17:16:48 by ade-cham          #+#    #+#             */
-/*   Updated: 2020/05/08 16:46:12 by ade-cham         ###   ########.fr       */
+/*   Updated: 2020/05/29 16:00:08 by ade-cham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);

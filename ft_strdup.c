@@ -6,9 +6,11 @@
 /*   By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/12 17:23:58 by ade-cham          #+#    #+#             */
-/*   Updated: 2020/05/12 17:37:18 by ade-cham         ###   ########.fr       */
+/*   Updated: 2020/05/29 15:55:05 by ade-cham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {

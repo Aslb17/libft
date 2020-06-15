@@ -6,10 +6,11 @@
 /*   By: ade-cham <ade-cham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/11 14:35:15 by ade-cham          #+#    #+#             */
-/*   Updated: 2020/05/11 14:48:57 by ade-cham         ###   ########.fr       */
+/*   Updated: 2020/05/29 15:58:00 by ade-cham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
